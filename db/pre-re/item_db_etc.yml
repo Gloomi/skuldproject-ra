@@ -21160,3 +21160,16 @@ Body:
     Locations:
       Ammo: true
     EquipLevelMin: 99
+  - Id: 2000000
+    AegisName: Unidentified_Coin
+    Name: Unidentified Coin
+    Trade:
+      NoDrop: true
+      NoSell: true
+  - Id: 2000001
+    AegisName: Service_Certificate
+    Name: Service Certificate
+    Trade:
+      NoDrop: true
+      NoSell: true
+        

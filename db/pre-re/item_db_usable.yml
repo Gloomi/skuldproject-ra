@@ -4768,7 +4768,7 @@ Body:
       NoMail: true
       NoAuction: true
     Script: |
-      sc_start SC_EXPBOOST,1800000,50;
+      sc_start SC_EXPBOOST,1800000,100;
   - Id: 12209
     AegisName: Insurance
     Name: Life Insurance
