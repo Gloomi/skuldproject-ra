@@ -325,8 +325,14 @@ Body:
     LogCommands: true
     Permissions:
       all_commands: true
-
-
+      all_skill: true
+      all_equipment: true
+      skill_unconditional: true
+      can_trade_bounded: true
+      item_unconditional: true
+      bypass_max_stat: true
+      
+      
 Footer:
   Imports:
   - Path: conf/import/groups.yml
