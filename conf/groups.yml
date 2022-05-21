@@ -46,8 +46,35 @@ Body:
     Name: Player
     Level: 0
     Commands:
-      changedress: true
-      resurrect: true
+      rates: true
+      time: true
+      uptime: true
+      refresh: true
+      showdelay: true
+      exp: true
+      showexp: true
+      showzeny: true
+      noask: true
+      noks: true
+      mobinfo: true
+      iteminfo: true
+      whodrops: true
+      autoloot: true
+      autoloottype: true
+      whereis: true
+      commands: true
+      whogm: true
+      jailtime: true
+      autotrade: true
+      request: true
+      hominfo: true
+      homstats: true
+      channel: true
+      duel: true
+      invite: true
+      accept: true
+      reject: true
+      leave: true
     Permissions:
       # without this basic permissions regular players could not trade or party
       can_trade: true
@@ -216,29 +243,91 @@ Body:
       hack_info: true
       any_warp: true
       view_hpmeter: true
-  - Id: 99
-    Name: Admin
-    Level: 99
+  - Id: 60
+    Name: GM
     Inherit:
-      Support: true
       Law Enforcement: true
+    Level: 60
+    LogCommands: true
+    Permissions:
+      can_trade: false
+      can_party: false
+      attendance: false
+  - Id: 80
+    Name: High GM
+    Inherit: 
+      GM: true
+    Level: 80
+    Commands:
+      refreshall: true
+      font: true
+      agitstart: true
+      agitend: true
+      agitstart2: true
+      agitend2: true
+      day: true
+      night: true
+      sound: true
+      snow: true
+      clouds: true
+      clouds2: true
+      fog: true
+      fireworks: true
+      sakura: true
+      leaves: true
+      clearweather: true
+      addwarp: true
+      mapinfo: true
+      skilltree: true
+      hide: true
+      summon: true
+      tonpc: true
+      feelreset: true
+      zeny: true
+      cash: true
+      points: true
+      model: true
+      hairstyle: true
+      haircolor: true
+      dye: true
+      bodystyle: true
+      changelook: true
+      costume: true
+      vip: true
+      marry: true
+      divorce: true
+      adopt: true
+      block: true
+      unblock: true
+      partyspy: true
+      guildspy: true
+      makeegg: true
+      hatch: true
+      pettalk: true
+      petrename: true
+      petfriendly: true
+      pethungry: true
+      makehomun: true
+      homevolution: true
+      hommutate: true
+      homshuffle: true
+      homtalk: true
+      homlevel: true
+      homfriendly: true
+      homhungry: true
     LogCommands: true
     Permissions:
       can_trade: true
       can_party: true
-      command_enable: true
-      all_skill: false
-      all_equipment: false
-      skill_unconditional: false
-      use_check: true
-      use_changemaptype: true
+  - Id: 99
+    Name: Admin
+    Level: 99
+    Inherit:
+      High GM: true
+    LogCommands: true
+    Permissions:
       all_commands: true
-      channel_admin: true
-      can_trade_bounded: true
-      item_unconditional: false
-      bypass_stat_onclone: true
-      bypass_max_stat: true
-      #all_permission: true
+
 
 Footer:
   Imports:
