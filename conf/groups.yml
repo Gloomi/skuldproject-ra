@@ -252,7 +252,6 @@ Body:
     Permissions:
       can_trade: false
       can_party: false
-      attendance: false
   - Id: 80
     Name: High GM
     Inherit:
