@@ -39,7 +39,7 @@ prt_in,46,97,4	script	Strange Novice	567,{
 	set .@i,(select("^FF3355Reset Skills:Reset Stats:Reset Both^000000:Cancel"));
 	if(.@i > 3) close;
 	mes "[Strange Novice]";
-	if (Zeny < .@Reset[.@i-1]) {
+	if ((Zeny < .@Reset[.@i-1]) || (countitem(2000001) < 1)) {
 		mes "I can't help you under that condition.";
 		close;
 	}
