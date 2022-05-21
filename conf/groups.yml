@@ -255,7 +255,7 @@ Body:
       attendance: false
   - Id: 80
     Name: High GM
-    Inherit: 
+    Inherit:
       GM: true
     Level: 80
     Commands:
@@ -293,7 +293,6 @@ Body:
       bodystyle: true
       changelook: true
       costume: true
-      vip: true
       marry: true
       divorce: true
       adopt: true
