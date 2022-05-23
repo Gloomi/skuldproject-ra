@@ -6244,7 +6244,9 @@ bool pc_steal_item(struct map_session_data *sd,struct block_list *bl, uint16 ski
 		i_data = itemdb_search(itemid);
 		sprintf (message, msg_txt(sd,542), (sd->status.name[0])?sd->status.name :"GM", md->db->jname.c_str(), i_data->ename.c_str(), (float)md->db->dropitem[i].rate / 100);
 		//MSG: "'%s' stole %s's %s (chance: %0.02f%%)"
-		clif_broadcast(&sd->bl, message, strlen(message) + 1, BC_DEFAULT, ALL_SAMEMAP);
+                if(&sd->bl == NULL) 
+                        continue;
+				clif_broadcast(&sd->bl, message, strlen(message) + 1, BC_DEFAULT, ALL_SAMEMAP);
 	}
 	return true;
 }
