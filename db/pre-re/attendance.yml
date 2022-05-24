@@ -49,7 +49,7 @@ Body:
       - Day: 4
         ItemId: 14001
       - Day: 5
-        ItemId: 2000001
+        ItemId: 12208
       - Day: 6
         ItemId: 7621
         Amount: 5
@@ -57,12 +57,12 @@ Body:
         ItemId: 12209
         Amount: 5
       - Day: 8
-        ItemId: 12208
-        Amount: 2
+        ItemId: 2000001
+        Amount: 1
       - Day: 9
         ItemId: 14002
       - Day: 10
-        ItemId: 2000001
+        ItemId: 12208
       - Day: 11
         ItemId: 617
         Amount: 2
@@ -70,13 +70,13 @@ Body:
         ItemId: 12211
         Amount: 5
       - Day: 13
-        ItemId: 12208
-        Amount: 2
+        ItemId: 14003
+        Amount: 1
       - Day: 14
         ItemId: 14003
         Amount: 1
       - Day: 15
-        ItemId: 2000001
+        ItemId: 12208
         Amount: 1
       - Day: 16
         ItemId: 12103
