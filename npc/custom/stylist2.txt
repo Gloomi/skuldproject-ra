@@ -40,6 +40,7 @@ prt_in,38,104,4	script	Super Stylist#super_stylist	4_F_PREMI,{
 			mes "^FF0000[ Super Stylist - Dress Room ]^000000";
 			mes "Sorry, you are not authorized to use this service.";
 			close;
+			}
 			next;
 			opendressroom(0);
 
