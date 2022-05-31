@@ -37,8 +37,10 @@ prt_in,38,104,4	script	Super Stylist#super_stylist	4_F_PREMI,{
 	)) {
 		case 1:
 			if ((Zeny < 100000) || (countitem(2000000) < 1)) {
+			next;
 			mes "^FF0000[ Super Stylist - Dress Room ]^000000";
 			mes "Sorry, you are not authorized to use this service.";
+			cutin "",255;
 			close;
 			}
 			next;
