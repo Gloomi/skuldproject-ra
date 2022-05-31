@@ -17,7 +17,7 @@
 //= [Akira] 
 //= Email: kvictor@protonmail.com
 //============================================================
-prt_in,38,104,8	script	Super Stylist#super_stylist	4_F_PREMI,{
+prt_in,38,104,4	script	Super Stylist#super_stylist	4_F_PREMI,{
 	doevent "super_stylist_main::OnTalk";
 }
 
@@ -44,7 +44,7 @@ prt_in,38,104,8	script	Super Stylist#super_stylist	4_F_PREMI,{
 				switch (select(
 					"Change Hairstyle",
 					"Change Hairdye",
-					"Change Cloth Color",
+					"Change Cloth Color"
 				)) {
 					case 1:
 						set .@hairstylemin,getBattleFlag("min_hair_style");
