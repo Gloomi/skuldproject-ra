@@ -104,7 +104,7 @@ prt_in,38,104,4	script	Super Stylist#super_stylist	4_F_PREMI,{
 					case 3:
 						next;
 						set .@clothcolormin,getBattleFlag("min_cloth_color");
-						set .@clothcolormax,2;
+						set .@clothcolormax,3;
 						mes "^FF0000[ Super Stylist - Cloth Color ]^000000";
 						mes "Insert a cloth color number";
 						mes "Cloth Colors: " +.@clothcolormin+ " to " +.@clothcolormax;
