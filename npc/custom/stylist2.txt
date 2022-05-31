@@ -118,6 +118,7 @@ prt_in,38,104,4	script	Super Stylist#super_stylist	4_F_PREMI,{
 						delitem 2000000,1;
 						set Zeny, Zeny-.stylecost;
 						setlook LOOK_CLOTHES_COLOR,.@clothcolor;
+						cutin "",255;
 						close;
 					case 4:
 						next;
