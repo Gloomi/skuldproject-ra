@@ -23,6 +23,7 @@ prt_in,38,104,4	script	Super Stylist#super_stylist	4_F_PREMI,{
 
 
 -	script	super_stylist_main	-1,{
+	set .stylecost,100000; //cost for stylist service
 	OnTalk:
 		.@eac = eaclass();
 		.@gm_level = getgmlevel();
@@ -35,6 +36,10 @@ prt_in,38,104,4	script	Super Stylist#super_stylist	4_F_PREMI,{
 		"Cancel"
 	)) {
 		case 1:
+			if ((Zeny < 100000) || (countitem(2000000) < 1)) {
+			mes "^FF0000[ Super Stylist - Dress Room ]^000000";
+			mes "Sorry, you are not authorized to use this service.";
+			close;
 			next;
 			opendressroom(0);
 
@@ -49,8 +54,8 @@ prt_in,38,104,4	script	Super Stylist#super_stylist	4_F_PREMI,{
 					case 1:
 						set .@hairstylemin,getBattleFlag("min_hair_style");
 						if (.@eac != EAJL_SUMMONER) {
-						set .@hairstylemaxf,97;
-						set .@hairstylemaxm,82;
+						set .@hairstylemaxf,32;
+						set .@hairstylemaxm,32;
 						} else {
 							set .@hairstylemaxf,6;
 							set .@hairstylemaxm,6;
@@ -73,37 +78,44 @@ prt_in,38,104,4	script	Super Stylist#super_stylist	4_F_PREMI,{
 							set .@hairstyle,0; 
 							}
 						}
+						set Zeny, Zeny-.stylecost;
 						setlook LOOK_HAIR,.@hairstyle;
 						next;
 						break;
 					case 2:
 						next;
 						set .@hairdyemin,getBattleFlag("min_hair_color");
-						set .@hairdyemax,getBattleFlag("max_hair_color");
+						set .@hairdyemax,8;
 						mes "^FF0000[ Super Stylist - Hairdye ]^000000";
 						mes "Insert a hairdye number";
 						mes "Hairdyes: " +.@hairdyemin+ " to " +.@hairdyemax;
 						input .@hairdye;
 						if (.@hairdye < .@hairdyemin || .@hairdye > .@hairdyemax) { 
+						set Zeny, Zeny-.stylecost;
 						set .@hairdye,0; 
 						}
+						set Zeny, Zeny-.stylecost;
 						setlook LOOK_HAIR_COLOR,.@hairdye;
 						next;
 						break;
 					case 3:
 						next;
 						set .@clothcolormin,getBattleFlag("min_cloth_color");
-						set .@clothcolormax,getBattleFlag("max_cloth_color");
+						set .@clothcolormax,2;
 						mes "^FF0000[ Super Stylist - Cloth Color ]^000000";
 						mes "Insert a cloth color number";
 						mes "Cloth Colors: " +.@clothcolormin+ " to " +.@clothcolormax;
 						input .@clothcolor;
-						if (.@clothcolor < .@clothcolormin || .@clothcolor > .@clothcolormax) { 
-						set .@clothcolor,0; 
+						if (.@clothcolor < .@clothcolormin || .@clothcolor > .@clothcolormax) {
+						delitem 2000000,1;
+						set Zeny, Zeny-.stylecost;
+						set .@clothcolor,0;
+						close;
 						}
+						delitem 2000000,1;
+						set Zeny, Zeny-.stylecost;
 						setlook LOOK_CLOTHES_COLOR,.@clothcolor;
-						next;
-						break;
+						close;
 					case 4:
 						next;
 						set .@blacklist,roclass(.@eac&EAJ_THIRDMASK) == 4054 || 
