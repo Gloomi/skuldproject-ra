@@ -1,4 +1,4 @@
-prontera,152,190,4	script	Kafra Employee::kaf_prontera5	117,{
+prontera,152,190,4	script	Kafra Employee::cuskafra	117,{
 	cutin "kafra_01",2;
 	callfunc "F_KafSet";
 	mes "[Kafra Employee]";
