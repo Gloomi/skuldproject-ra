@@ -35,7 +35,7 @@ Header:
   
 Body:
   - Start: 20220521
-    End: 20220621
+    End: 20220630
     Rewards:
       - Day: 1
         ItemId: 7060
